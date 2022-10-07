@@ -6,6 +6,10 @@
 *A build script support by the Ant build tool
 *...
 
+### Screenshots
+
+![Build process with Ant](https://github.com/helidtor/math-util-ant-se1607/blob/main/screenshot/source-code-with-junit.png)
+
 ### Connect me via helidtor@gmail.com
 
 ### Copyright&#169; 2022 helidtor
