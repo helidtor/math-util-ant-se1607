@@ -5,7 +5,7 @@
  */
 package com.helidtor.mathutil.core;
 
-import org.junit.Assert;
+import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -50,7 +50,7 @@ public class MathUtilDDTTest {
                                     {6, 3}, 
                                     {24, 4}, 
                                     {120, 5}, 
-                                    {702, 6}
+                                    {720, 6},
            };  
         }
     @Parameterized.Parameter(value = 0)
@@ -60,6 +60,7 @@ public class MathUtilDDTTest {
     @Parameterized.Parameter(value = 1)
     public int n; //biến này sẽ lưu giá trị đưa cho hàm getF() để check
     //ta sẽ map/ánh xạ 2 biến này ứng với 2 cột của từng dòng của 2 mảng trên!!
+    
     //ta phải quy ước biến expected map vào cột nào mình muốn
     //thứ tự biến ko quan trọng, thứ tự cột trong mảng ko quan trọng
     // vì ta sẽ cấu hình việc map tương ứng này!!
@@ -68,7 +69,7 @@ public class MathUtilDDTTest {
     
     @Test
     public void testFactorialGivenRightArgumentReturnsWell() {
-        Assert.assertEquals(expected, MathUtil.getFactorial(n));
+        assertEquals(expected, MathUtil.getFactorial(n));
     }
 }
 
