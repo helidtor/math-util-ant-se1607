@@ -17,19 +17,32 @@ public class MathUtil {
     //quy ước: ko có giai thừa
     //  0! = 1! = 1
     //  chỉ tính n từ 0->20, vì 21! vượt quá 18 con số, vượt long
+    
+    //viết hàm tính giai thừa theo style đệ quy! RECURSION
     public static long getFactorial(int n) {
         if (n < 0 || n > 20)
             throw new IllegalArgumentException("Invalid n (n must be between 0..20)");
         
-        if (n == 0 || n == 1)
-            return 1;
+//        if (n == 0 || n == 1)
+//            return 1;
         
-        long product = 1; //biến tích lũy acc/accumulation
-        for (int i = 2; i <= n; i++)
-            product *= i; //product *=  i;
-            
-        return product;
+        //từ 2! là đoạn code dưới
+        return n * getFactorial(n - 1);
     }
+    
+//    public static long getFactorial(int n) {
+//        if (n < 0 || n > 20)
+//            throw new IllegalArgumentException("Invalid n (n must be between 0..20)");
+//        
+//        if (n == 0 || n == 1)
+//            return 1;
+//        
+//        long product = 1; //biến tích lũy acc/accumulation
+//        for (int i = 2; i <= n; i++)
+//            product *= i; //product *=  i;
+//            
+//        return product;
+//    }
 }
 
 // học kỹ thuật viết code mới được gọi là TDD - TEST DRIVEN DEVELOPMENT
